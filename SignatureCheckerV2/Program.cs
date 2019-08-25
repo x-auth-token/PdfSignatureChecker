@@ -127,14 +127,15 @@ namespace SignatureCheckerV2
                 ws.Name = "Result";
 
                 // Set first row headers to filter later
-                ws.Cells[row, 1] = "Filename";
-                ws.Cells[row, 2] = "Signing Status";
+                ws.Cells[row, 1] = "Directory Name";
+                ws.Cells[row, 2] = "File Name";
+                ws.Cells[row, 3] = "Signing Status";
                 row++;
 
 
                 // Get all target filenames from directory including sub-directories               
                 filenames = Directory.EnumerateFiles(srcFolder, "*.pdf", SearchOption.AllDirectories);
-
+                
                 foreach (string temp in filenames)
                 {
                     filename = temp;
@@ -149,19 +150,20 @@ namespace SignatureCheckerV2
                             if (acroFields.GetSignatureNames().Count != 0)
                             {
 
-
-                                ws.Cells[row, 1] = filename;
-                                ws.Cells[row, 2] = "signed";
+                                
+                                ws.Cells[row, 1] = Path.GetDirectoryName(filename);
+                                ws.Cells[row, 2] = Path.GetFileName(filename);
+                                ws.Cells[row, 3] = "signed";
                                 row++;
-                                //wb.SaveAs(resultFile);
+                             
                             }
                             else
                             {
-                                ws.Cells[row, 1] = filename;
-                                ws.Cells[row, 2] = "unsigned";
+                                ws.Cells[row, 1] = Path.GetDirectoryName(filename);
+                                ws.Cells[row, 2] = Path.GetFileName(filename);
+                                ws.Cells[row, 3] = "unsigned";
                                 row++;
-                                //wb.SaveAs(resultFile);
-
+                              
                             }
 
                         }
@@ -169,21 +171,15 @@ namespace SignatureCheckerV2
                     catch (InvalidPdfException e)
                     {
 
-                        ws.Cells[row, 1] = filename;
-                        ws.Cells[row, 2] = "Corrupted or non conformant to PDF standard";
+                        ws.Cells[row, 1] = Path.GetDirectoryName(filename);
+                        ws.Cells[row, 2] = Path.GetFileName(filename);
+                        ws.Cells[row, 3] = "Corrupted or non conformant to PDF standard";
                         row++;
                     }
                 }
 
-                // Adding Autofilter
                 
-                /*ws.UsedRange.AutoFilter(1, Type.Missing, XlAutoFilterOperator.xlAnd, Type.Missing, true);
-                ws.Columns.AutoFit();
-                wb.SaveAs(resultFile);
-
-                excel.Visible = true;*/
-
-                
+        
 
             } // end try
             catch (DirectoryNotFoundException e)
@@ -191,8 +187,8 @@ namespace SignatureCheckerV2
                 Console.WriteLine(e.Message);
             }
 
-            
 
+            // Adding Autofilter
             ws.UsedRange.AutoFilter(1, Type.Missing, XlAutoFilterOperator.xlAnd, Type.Missing, true);
             ws.Columns.AutoFit();
             wb.SaveAs(resultFile);
