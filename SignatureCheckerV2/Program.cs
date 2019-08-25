@@ -6,7 +6,7 @@ using System.IO;
 using iTextSharp.text.pdf;
 using iTextSharp.text.exceptions;
 
-namespace SignatureCheckerV2
+namespace PdfSignatureChecker
 {
     /*
         TO DO:

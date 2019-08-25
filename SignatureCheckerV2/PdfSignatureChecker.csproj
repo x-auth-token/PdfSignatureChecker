@@ -6,14 +6,14 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E7F3FD3B-5087-44C3-BBAB-8F57D9609A12}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SignatureCheckerV2</RootNamespace>
-    <AssemblyName>SignatureCheckerV2</AssemblyName>
+    <RootNamespace>PdfSignatureChecker</RootNamespace>
+    <AssemblyName>PdfSignatureChecker</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\Signature Checker\</PublishUrl>
+    <PublishUrl>D:\PdfSignature Checker\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
