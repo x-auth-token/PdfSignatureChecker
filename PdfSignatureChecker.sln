@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfSignatureChecker", "SignatureCheckerV2\PdfSignatureChecker.csproj", "{E7F3FD3B-5087-44C3-BBAB-8F57D9609A12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfSignatureChecker", "PdfSignatureChecker\PdfSignatureChecker.csproj", "{E7F3FD3B-5087-44C3-BBAB-8F57D9609A12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

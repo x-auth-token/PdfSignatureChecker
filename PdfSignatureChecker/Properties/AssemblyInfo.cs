@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SignatureCheckerV2")]
+[assembly: AssemblyTitle("PdfSignatureChecker")]
 [assembly: AssemblyDescription("Checks if digital signature exists in pdf file")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CBC Group")]
-[assembly: AssemblyProduct("SignatureCheckerV2")]
+[assembly: AssemblyProduct("PdfSignatureChecker")]
 [assembly: AssemblyCopyright("Copyright ©  2019 Pavel Mayzenberg")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
